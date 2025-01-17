@@ -16,6 +16,11 @@ This program was built to help learn more about Winforms and C# API requests. Th
       - .NET 8 
       - WinForms
       - HttpClient
+
+## Using the Application 
+1. Download the executable file from the release section
+2. When the application launches, fill in your API URL and hit go:
+   
 ## Screenshots
 
 ### A
