@@ -12,10 +12,10 @@
 This program was built to help learn more about Winforms and C# API requests. This application is a clone of the Postman Application.  
  
 ## Technologies Used 
-      - Angular
-      - Mysql 
-      - Tailwindcss
-      - Spring Boot
+      - C#
+      - .NET 8 
+      - WinForms
+      - HttpClient
 ## Screenshots
 
 ### A
