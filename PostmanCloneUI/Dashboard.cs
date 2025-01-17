@@ -5,11 +5,12 @@ namespace PostmanCloneUI;
 public partial class Dashboard : Form
 {
 
-    private readonly IApiAccess api = new ApiAccess(); 
+    private readonly IApiAccess api = new ApiAccess();
 
     public Dashboard()
     {
         InitializeComponent();
+        httpVerbSelection.SelectedItem = "GET";
     }
 
     private async void callAPI_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ public partial class Dashboard : Form
 
             //Sample Code - replace with the actual API Call 
             resultstext.Text = await api.CallApiAsync(apitext.Text);
+            callData.SelectedTab = outputTab;
 
             systemStatus.Text = "Ready";
         }
@@ -44,6 +46,4 @@ public partial class Dashboard : Form
             systemStatus.Text = "Error";
         }
     }
-
-    
 }
