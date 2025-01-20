@@ -4,5 +4,6 @@ namespace PostmanClone.Library;
 
     public enum HttpAction
     {
-    GET
+        GET,
+        POST,
     }
