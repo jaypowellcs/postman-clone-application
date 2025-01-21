@@ -20,7 +20,7 @@ namespace PostmanClone.Library
             )
         {
             StringContent stringContent = new(content, Encoding.UTF8, "application/json");
-            return await CallApiAsync( url, new StringContent( content), action, formatOutput );
+            return await CallApiAsync( url, stringContent, action, formatOutput );
         }
         public async Task<string> CallApiAsync(
             string url,
@@ -40,6 +40,15 @@ namespace PostmanClone.Library
                     break;
                 case HttpAction.POST:
                     response = await client.PostAsync(url, content);
+                    break;
+                case HttpAction.PUT:
+                    response = await client.PutAsync(url, content);
+                    break;
+                case HttpAction.PATCH:
+                    response = await client.PatchAsync(url, content);
+                    break;
+                case HttpAction.DELETE:
+                    response = await client.DeleteAsync(url);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(action), action, null);
