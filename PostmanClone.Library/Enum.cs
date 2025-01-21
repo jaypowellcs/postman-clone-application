@@ -6,4 +6,7 @@ namespace PostmanClone.Library;
     {
         GET,
         POST,
+        PUT,
+        PATCH, 
+        DELETE,
     }
